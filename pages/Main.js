@@ -8,7 +8,7 @@ const Main = ({ places }) => {
   return (
     <div className="max-w-7xl mx-auto px-3 py-10">
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-8">
-        {places.map((place) => (
+        {places?.map((place) => (
           <TravelCard key={place.id} place={place} />
         ))}
       </div>
