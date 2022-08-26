@@ -5,14 +5,14 @@ import { NavBar, Footer, Category } from '../components';
 
 import Main from './Main';
 
-export default function Home({ places , categories }) {
+export default function Home({ places, categories }) {
   return (
     <div>
       <Head>
         <title>Airbnb clone</title>
         <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
       </Head>
-      <NavBar categories = {categories} />
+      <NavBar categories={categories} />
       <Main places={places} />
       <footer>
         <Footer />
@@ -27,8 +27,8 @@ export async function getStaticProps() {
     url: 'https://airbnb19.p.rapidapi.com/api/v1/searchProperty',
     params: { category: 'TAB_8225', totalRecords: '10', currency: 'USD', adults: '1' },
     headers: {
-      'X-RapidAPI-Key': 'ec8373c351msh16435922a425c26p135a6djsnc947da051108',
-      'X-RapidAPI-Host': 'airbnb19.p.rapidapi.com',
+      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+      'X-RapidAPI-Host': process.env.NEXT_PUBLIC_RAPIDAPI_HOST,
     },
   };
 
@@ -46,8 +46,8 @@ export async function getStaticProps() {
     method: 'GET',
     url: 'https://airbnb19.p.rapidapi.com/api/v1/getCategory',
     headers: {
-      'X-RapidAPI-Key': 'ec8373c351msh16435922a425c26p135a6djsnc947da051108',
-      'X-RapidAPI-Host': 'airbnb19.p.rapidapi.com',
+      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+      'X-RapidAPI-Host': process.env.NEXT_PUBLIC_RAPIDAPI_HOST,
     },
   };
 

@@ -19,7 +19,7 @@ const NavBar = ({ categories }) => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
                   alt="Airbnb logo"
-                  className="object-cover   h-[30px]"
+                  className="object-cover h-[30px]"
                 />
               </div>
               {/* search component */}
