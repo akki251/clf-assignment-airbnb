@@ -32,7 +32,7 @@ export async function getStaticProps() {
     },
   };
 
-  let places = null;
+  let places = [];
   try {
     const response = await axios.request(options);
     places = await response.data.data;
@@ -40,7 +40,7 @@ export async function getStaticProps() {
     console.log(error);
   }
 
-  let categories = null;
+  let categories = [];
 
   const optionsCategory = {
     method: 'GET',
