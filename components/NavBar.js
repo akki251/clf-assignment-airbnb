@@ -64,7 +64,7 @@ const NavBar = ({ categories }) => {
                   <BiSearchAlt2 size={20} />
                 </div>
                 <div className="flex-1">
-                  <p className="font-medoum">Where To?</p>
+                  <p className="font-medium">Where To?</p>
                   <p className="flex align-middle text-xs text-gray-500 ">
                     Anywhere . Anyweek . Add guests
                   </p>
